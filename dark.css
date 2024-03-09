@@ -7,7 +7,8 @@
 
 body {
     height: 100vh;
-    width: 100%;
+    font-family: "Inter", sans-serif;
+
 
     display: flex;
     align-items: center;
@@ -29,13 +30,6 @@ body {
     z-index: -1;
 }
 
-
-.width-container {
-    width: 70vw;
-
-
-    font-family: "Inter", sans-serif;
-}
 
 header {
     display: flex;
@@ -360,4 +354,72 @@ instead on the top. */
 
 .overview-section > .likes-card:hover {
     background-color: hsl(226, 18%, 24%);
+}
+
+
+
+
+/* media queries */
+
+
+@media screen and (max-width: 1250px) {
+    body {
+        height: fit-content;
+        padding: 5rem 0px 5rem 0px;
+    }
+
+    .followers-section {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+
+        justify-items: center;
+    }
+
+    .overview-title {
+        grid-column: 1 / span 2;
+    }
+
+
+    .overview-section {
+        width: 100%;
+        grid-template-columns: repeat(2, 18rem);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .total-followers {
+        line-height: 2rem;
+    }
+
+    .total-followers > h1 {
+        margin: 0;
+    }
+
+    .followers-section {
+        width: 100%;
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+    }
+
+    .overview-title {
+        grid-column: 1;
+        text-align: center;
+    }
+
+
+    .overview-section {
+        width: 100%;
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        padding: 0px 0.5rem 0px 0.5rem;
+    }
 }

@@ -8,54 +8,178 @@
   
   <title>Frontend Mentor | Social Media Dashboard</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link id="stylesheet" rel="stylesheet" href="dark.css">
+
 </head>
 <body>
-  <header>
-    <div class="total-followers">
-      <h1>Social Media Dashboard</h1>
-      <p>Total Followers: 23,004</p>
-    </div>
-    <div class="dark-mode">
-      <p>Dark Mode</p>
-      <button aria-label="Dark Mode Button"><div class="button-circle"></div></button>
-    </div>
-  </header>
+  <div class="bg-color"></div>
+  <div class="width-container">
 
-  <main>
 
-    <section class="followers-section">
-
-      <!-- followers from facebook -->
-      <div class="facebook-followers">
-
+    <header>
+      <div class="total-followers">
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
       </div>
-
-      <!-- followers from twitter -->
-      <div class="twitter-followers">
-
+      <div class="dark-mode">
+        <p>Dark Mode</p>
+        <button id="dark-mode" aria-label="Dark Mode Button"><div class="button-circle"></div></button>
       </div>
+    </header>
 
-      <!-- followers from instagram -->
-      <div class="instragram-followers">
+    <main>
 
-      </div>
+      <section class="followers-section">
 
-      <!-- subscribers on youtube -->
-      <div class="youtube-subs">
+        <!-- followers from facebook -->
+        <div class="facebook-card follower-card">
+          <p><img src="./images/icon-facebook.svg" class="icon">@nathanf</p>
+          <p>1987</p>
+          <p>FOLLOWERS</p>
+          <p class="positive-count"><img src="./images//icon-up.svg" alt="Increased" class="count-arrow">12 Today</p>
+        </div>
 
-      </div>
-    </section>
+        <!-- followers from twitter -->
+        <div class="twitter-card follower-card">
+          <p><img src="./images/icon-twitter.svg" class="icon">@nathanf</p>
+          <p>1044</p>
+          <p>FOLLOWERS</p>
+          <p class="positive-count"><img src="./images//icon-up.svg" class="count-arrow" alt="Increased">99 Today</p>
+        </div>
 
-    <section class="overview-section">
+        <!-- followers from instagram -->
+        <div class="instagram-card follower-card">
+          <p><img src="./images/icon-instagram.svg" class="icon">@realnathanf</p>
+          <p>11k</p>
+          <p>FOLLOWERS</p>
+          <p class="positive-count"><img src="./images//icon-up.svg" class="count-arrow" alt="Increased">1099 Today</p>
+        </div>
 
-    </section>
-  </main>
+        <!-- subscribers on youtube -->
+        <div class="youtube-card follower-card">
+          <p><img src="./images/icon-youtube.svg" class="icon">Nathan F.</p>
+          <p>8239</p>
+          <p>SUBSCRIBERS</p>
+          <p class="negative-count"><img src="./images//icon-down.svg" alt="Decreased" class="count-arrow">144 Today</p>
+        </div>
+      </section>
+
+
+      <section class="overview-section">
+        <p class="overview-title">Overview - Today</p>
+
+        <!-- facebook overview section -->
+            <div class="facebook-views views-card">
+              
+                <p>Page Views</p>
+                <img src="./images/icon-facebook.svg" alt="Facebook" class="overview-icon">
+
+                <p>87</p>
+                <p class="positive-count"><img src="./images/icon-up.svg" alt="Increased" class="count-arrow">3%</p>
+
+            </div>
+
+
+            <div class="facebook-likes likes-card">
+
+              <p>Likes</p>
+              <img src="./images/icon-facebook.svg" alt="Facebook" class="overview-icon">
+
+              <p>52</p>
+              <p class="negative-count"><img src="./images/icon-down.svg" alt="Decreased" class="count-arrow">2%</p>
+
+            </div>
+
+
+
+
+        <!-- instagram overview section -->
+          <div class="instagram-views views-card">
+
+            <p>Profile Views</p>
+            <img src="./images/icon-instagram.svg" alt="Instagram" class="overview-icon">
+
+            <p>52k</p>
+            <p class="positive-count"><img src="./images/icon-up.svg" alt="Increased" class="count-arrow">2257%</p>
+
+          </div>
+
+
+
+          <div class="instagram-likes likes-card">
+
+            <p>Likes</p>
+            <img src="./images/icon-instagram.svg" alt="Instagram" class="overview-icon">
+
+            <p>5462</p>
+            <p class="positive-count"><img src="./images/icon-up.svg" alt="Increased" class="count-arrow">1375%</p>
+
+          </div>
+
+
+
+
+
+
+        <!-- twitter overview section -->
+          <div class="twitter-retweets views-card">
+
+            <p>Retweets</p>
+            <img src="./images/icon-twitter.svg" alt="Twitter" class="overview-icon">
+
+            <p>117</p>
+            <p class="positive-count"><img src="./images/icon-up.svg" alt="Increased" class="count-arrow">303%</p>
+
+          </div>
+
+
+
+          <div class="twitter-likes likes-card">
+
+            <p>Likes</p>
+            <img src="./images/icon-twitter.svg" alt="Twitter" class="overview-icon">
+
+            <p>507</p>
+            <p class="positive-count"><img src="./images/icon-up.svg" alt="Increased" class="count-arrow">553%</p>
+
+          </div>
+
+
+
+
+
+
+        <!-- youtube overview section -->
+          <div class="youtube-views views-card">
+
+            <p>Total Views</p>
+            <img src="./images/icon-youtube.svg" alt="Youtube" class="overview-icon">
+
+            <p>1407</p>
+            <p class="negative-count"><img src="./images/icon-down.svg" alt="Decreased" class="count-arrow">12%</p>
+
+          </div>
+
+
+
+
+          <div class="youtubes-likes likes-card">
+
+            <p>Likes</p>
+            <img src="./images/icon-youtube.svg" alt="Youtube" class="overview-icon">
+
+            <p>107</p>
+            <p class="negative-count"><img src="./images/icon-down.svg" alt="Decreased" class="count-arrow">19%</p>
+
+          </div>
+
+      </section>
+    </main>
 
   
 
+  </div>
 
-  
-
+  <script src="./index.js"></script>
 </body>
 </html>

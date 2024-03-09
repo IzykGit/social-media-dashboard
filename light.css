@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+
+    margin: 0;
+    padding: 0;
+
+    transition: 0.2s
+}
+
+.bg-color {
+    background-color: hsl(225, 100%, 98%);
+    height: 30vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+
+.width-container {
+    width: 70vw;
+
+
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.total-followers {
+    line-height: 1rem;
+}
+
+.total-followers > h1 {
+    color: hsl(230, 17%, 14%);
+    font-weight: 700;
+}
+
+.total-followers > p {
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+}
+
+
+
+.dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.dark-mode > p {
+    color: hsl(230, 17%, 14%);
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.dark-mode > button {
+    width: 3.5rem;
+    height: 1.5rem;
+
+    border-radius: 1rem;
+    border: none;
+
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.button-circle {
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: white;
+
+    border-radius: 100%;
+
+    transform: translateX(1.5rem);
+    transition: 0.2s;
+}
+
+
+
+/* common reused classes */
+
+
+.icon {
+    margin-right: 1rem;
+}
+
+.negative-count {
+    display: flex;
+    align-items: center;
+    color: hsl(356, 69%, 56%);
+}
+
+.positive-count {
+    display: flex;
+    align-items: center;
+    color: hsl(163, 72%, 41%);
+}
+
+.count-arrow {
+    margin-right: 0.4em;
+}
+
+
+
+
+
+/* followers section of webpage */
+
+/* instead of centering the items in the card using justify content I used margins due to instagram having
+a gradient top. When using justify content it will shift the instagram gradient border to be in the middle of the card
+instead on the top. */
+
+
+.followers-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    width: 100%;
+    gap: 2.6rem;
+}
+
+
+.follower-card {
+    width: 17rem;
+    height: 15rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: hsl(227, 47%, 96%);
+}
+
+.follower-card > p:nth-child(1) {
+    display: flex;
+    justify-content: space-evenly;
+    
+    color: hsl(228, 12%, 44%);
+    margin-top: 1.5rem;
+}
+
+
+
+
+.follower-card > p:nth-child(2) {
+    font-size: 3rem;
+    font-weight: 700;
+    color: hsl(230, 17%, 14%);
+
+    margin: 0.8rem 0rem 0.2rem 0rem;
+}
+
+.follower-card > p:nth-child(3) {
+    color: hsl(228, 12%, 44%);
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
+    
+    margin: 0rem 0rem 0.8rem 0rem;
+}
+
+
+/* facebook card section */
+
+.facebook-card {
+    border-top: 4px solid hsl(208, 92%, 53%);
+}
+
+
+/* twitter card section */
+
+.twitter-card {
+    border-top: 4px solid hsl(203, 89%, 53%);
+}
+
+/* instagram card section */
+
+.instagram-card::before {
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+
+/* youtube card section */
+
+.youtube-card {
+    border-top: 4px solid hsl(348, 97%, 39%);
+}
+
+
+
+
+.followers-section > * {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.followers-section > *:hover {
+    background-color: hsl(218, 34%, 77%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* overview css section */
+
+.overview-title {
+    color: hsl(230, 17%, 14%);
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: 100%;
+
+    grid-column: 1 / span 4;
+}
+
+.overview-section {
+    margin-top: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 18rem);
+
+    column-gap: 1.4rem;
+    row-gap: 1.2rem;
+}
+
+.overview-icon {
+    margin: 0;
+    padding: 0;
+    align-self: center;
+}
+
+.views-card {
+
+    display: grid;
+    justify-items: self-end;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+    height: fit-content;
+
+    background-color: hsl(227, 47%, 96%);
+    width: fit-content;
+
+    width: 100%;
+}
+
+.views-card > p:nth-child(1) {
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+
+    justify-self: flex-start;
+}
+
+.views-card > p:nth-child(3) {
+    color: hsl(230, 17%, 14%);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+
+    justify-self: flex-start;
+}
+
+.views-card > p:nth-child(4) {
+    justify-self: flex-end;
+    align-self: baseline;
+}
+
+
+
+
+
+/* likes card section */
+
+.likes-card {
+    display: grid;
+    justify-items: self-end;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+    height: fit-content;
+
+    background-color: hsl(227, 47%, 96%);
+
+    width: 100%;
+}
+
+.likes-card > p:nth-child(1) {
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.likes-card > p:nth-child(3) {
+    color: hsl(230, 17%, 14%);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+
+    justify-self: flex-start;
+}
+
+.likes-card > p:nth-child(4) {
+    justify-self: flex-end;
+    align-self: baseline;
+}
+
+
+.overview-section > .views-card {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.overview-section > .views-card:hover {
+    background-color: hsl(218, 34%, 77%);
+}
+
+
+
+.overview-section > .likes-card {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.overview-section > .likes-card:hover {
+    background-color: hsl(218, 34%, 77%);
+}
